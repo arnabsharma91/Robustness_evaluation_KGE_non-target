@@ -10,8 +10,7 @@ You can run the script for different models and perturbation conditions using th
 
 To execute the training script, use:
 
-```bash
-bash run_experiments.sh
+```bash run_experiments.sh```
 
 ### Perturbation Details
 
