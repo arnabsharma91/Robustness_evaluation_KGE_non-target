@@ -10,7 +10,7 @@ You can run the script for different models and perturbation conditions using th
 
 To execute the training script, use:
 
-```bash run_experiments.sh```
+```bash RKGE.sh```
 
 ### Perturbation Details
 
@@ -35,15 +35,16 @@ For each combination of perturbation type and ratio, the model's performance is 
 
 ---
 ### Example Command
+You can also run the experiments without the .sh file. To run the code, directly from the command like, you can use the following command:
 
-python -m dicee.run --trainer PL \
+```python -m dicee.run --trainer PL \
     --path_to_store_single_run "Robust/dice-embeddings/WN18RRLP/WN18RR-LP-ComplEx-Dim32-Epoch-100-label-Perturb-k0.01-rs1" \
     --model "ComplEx" --embedding_dim 32 --num_epochs 100 \
     --callbacks "{\"Perturb\": { \"level\": \"out\", \"method\": \"Hard\", \"ratio\": 0.01}}" \
-    --batch_size 1024 --random_seed 1
+    --batch_size 1024 --random_seed 1```
 
 
-## Hyperparameters
+### Hyperparameters
 
 The main hyperparameters used in the training process include:
 
